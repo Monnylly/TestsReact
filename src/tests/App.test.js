@@ -1,7 +1,5 @@
 import React from 'react';
 import { screen, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-// import renderWithRouter from '../components/RenderWith';
 import renderWithRouter from '../utils/renderWithRouter';
 
 import App from '../App';
