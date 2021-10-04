@@ -7,7 +7,6 @@ import pokemons from '../data';
 import renderWithRouter from '../utils/renderWithRouter';
 import { Pokemon } from '../components';
 // import { render } from 'react-dom';
-// import { Pokemon } from '../components';
 
 describe('Testando o componente Pokemon', () => {
   it('O nome e o tipo correto do Pokémon deve ser mostrado na tela', async () => {
@@ -34,7 +33,6 @@ describe('Testando o componente Pokemon', () => {
   });
   it(`'Teste se o card do Pokémon indicado na Pokédex
    contém um link de navegação para exibir detalhes deste Pokémon'`, () => {
-
     renderWithRouter(<App />);
     const link = screen.getByRole('link', {
       name: 'More details',
