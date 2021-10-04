@@ -1,6 +1,6 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+// import userEvent from '@testing-library/user-event';
 import App from '../App';
 import pokemons from '../data';
 import renderWithRouter from '../utils/renderWithRouter';
@@ -22,9 +22,10 @@ describe('Testando o componente Pokemon', () => {
   });
   it('O peso médio do pokémon deve ser exibido com um texto no formato', () => {
     renderWithRouter(<App />);
-    const { averageWeight: { value, measurementUnit }, image } = pokemons[0];
+    const { averageWeight: { value, measurementUnit } } = pokemons[0];
     const pokemonWeight = screen.getByTestId('pokemon-weight');
 
-    expect(pokemonWeight).toHaveTextContent(`Average weight: ${value} ${measurementUnit}`);
+    expect(pokemonWeight)
+      .toHaveTextContent(`Average weight: ${value} ${measurementUnit}`);
   });
 });
